@@ -7,27 +7,65 @@
     <title>IoT Car Controller</title>
   </head>
   <body>
-    <main>
+    <div id="landscape-message" class="landscape-message">
+      Please rotate your device to landscape mode for the best experience.
+    </div>
+    <main id="content">
       <div class="left">
-        <div class="left-controls">1</div>
+        <div class="left-controls">
+            <button class="speed-up">
+                <img src="./assets/arrow_up.png" alt="">
+            </button>
+            <div class="dir">
+                <button class="left">
+                    <img src="./assets/arrow_left.png" alt="">
+                </button>
+                <button class="right">
+                    <img src="./assets/arrow_right.png" alt="">
+                </button>
+            </div>
+            <button class="speed-down">
+                <img src="./assets/arrow_down.png" alt="">
+
+            </button>
+        </div>
+        <div class="speed-meter">
+          <div class="speed-1 speed"></div>
+          <div class="speed-2 speed"></div>
+          <div class="speed-3 speed"></div>
+        </div>
       </div>
 
-      <div class="road">2</div>
+      <div class="road">
+        <img src="./assets/light_car.png" alt="" />
+        <!-- <img src="./assets/car.png" alt="" /> -->
+        <div class="road-line"></div>
+      </div>
 
       <div class="right">
+        <div class="logo">
+          <img src="./assets/tech_camp_logo.png" alt="" />
+        </div>
         <div class="right-controls">
-          <div class="logo">
-            <img src="./assets/tech_camp_logo.png" alt="" />
-          </div>
           <div class="upper">
-            <div class="drive"></div>
+            <button class="drive btn">
+              <img src="./assets/steering.png" alt="" />
+            </button>
           </div>
           <div class="lower">
-            <div class="lights">1</div>
-            <div class="reverse">1</div>
+            <button class="lights btn">
+              <img src="./assets/lights_on.png" alt="" />
+              <!-- <img src="./assets/light_off.png" alt="" /> -->
+            </button>
+            <button class="reverse btn">
+              <img src="./assets/breaks.png" alt="" />
+            </button>
           </div>
         </div>
       </div>
     </main>
+
+
+    <script src="./script.js"></script>
   </body>
 </html>
