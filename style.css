@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  /* justify-content: stretch; */
+  align-items: center;
+}
+
+main {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.left {
+  flex: 3;
+  background-color: blue;
+}
+
+.road {
+  background-color: green;
+  flex: 1;
+}
+
+.right {
+  background-color: blue;
+  flex: 3;
+}
+.logo {
+  /* background-color: white; */
+  display: flex;
+  justify-content: end;
+}
+
+.logo img {
+  height: 100%;
+}
