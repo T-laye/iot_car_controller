@@ -63,16 +63,16 @@ function updateRoadSpeed(speed) {
   }
 }
 
-function updateReverseRoadSpeed(speed) {
-  const speedMap = {
-    1: "3s",
-    2: "1.5s",
-    3: "0.5s",
-  };
-  if (isBackwardPressed) {
-    roadLine.style.animation = `reverse-highway ${speedMap[speed]} linear infinite`;
-  }
-}
+// function updateReverseRoadSpeed(speed) {
+//   const speedMap = {
+//     1: "3s",
+//     2: "1.5s",
+//     3: "0.5s",
+//   };
+//   if (isBackwardPressed) {
+//     roadLine.style.animation = `reverse-highway ${speedMap[speed]} linear infinite`;
+//   }
+// }
 
 function speedBar() {
   if (speed === 2) {
@@ -116,7 +116,7 @@ function handleTouchStart(event, button) {
   if (button === "speedUp" && speed < 3) {
     speed++;
     speedBar();
-    console.log(`Speeding up: speed${speed}`);
+    // console.log(`Speeding up: speed${speed}`);
     if (isForwardPressed) {
       updateRoadSpeed(speed); // Update road speed only if forward is pressed
     }
