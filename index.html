@@ -6,28 +6,31 @@
     <link rel="stylesheet" href="style.css" />
     <title>IoT Car Controller</title>
   </head>
-  <body >
+  <body>
     <div id="landscape-message" class="landscape-message">
       Please rotate your device to landscape mode for the best experience.
     </div>
     <main id="content">
       <div class="left">
         <div class="left-controls">
-            <button class="speed-up">
-                <img src="./assets/arrow_up.png" alt="">
+          <button class="speed-up">
+            <!-- <div class="cover"></div> -->
+            <img src="./assets/arrow_up.png" alt="" />
+          </button>
+          <div class="dir">
+            <button class="left">
+              <!-- <div class="cover"></div> -->
+              <img src="./assets/arrow_left.png" alt="" />
             </button>
-            <div class="dir">
-                <button class="left">
-                    <img src="./assets/arrow_left.png" alt="">
-                </button>
-                <button class="right">
-                    <img src="./assets/arrow_right.png" alt="">
-                </button>
-            </div>
-            <button class="speed-down">
-                <img src="./assets/arrow_down.png" alt="">
-
+            <button class="right">
+              <!-- <div class="cover"></div> -->
+              <img src="./assets/arrow_right.png" alt="" />
             </button>
+          </div>
+          <button class="speed-down">
+            <!-- <div class="cover"></div> -->
+            <img src="./assets/arrow_down.png" alt="" />
+          </button>
         </div>
         <div class="speed-meter">
           <div class="speed-1 speed"></div>
@@ -49,22 +52,28 @@
         <div class="right-controls">
           <div class="upper">
             <button class="drive btn">
+              <!-- <div class="cover"></div> -->
               <img src="./assets/steering.png" alt="" />
             </button>
           </div>
           <div class="lower">
             <button class="lights btn">
-              <img class="light-on hidden" src="./assets/lights_on.png" alt="" />
+              <!-- <div class="cover"></div> -->
+              <img
+                class="light-on hidden"
+                src="./assets/lights_on.png"
+                alt=""
+              />
               <img class="light-off" src="./assets/light_off.png" alt="" />
             </button>
             <button class="reverse btn">
+              <!-- <div class="cover"></div> -->
               <img src="./assets/breaks.png" alt="" />
             </button>
           </div>
         </div>
       </div>
     </main>
-
 
     <script src="./script.js"></script>
   </body>

@@ -89,13 +89,17 @@ function speedBar() {
 
 function handleTouchStart(event, button) {
   const touchId = event.changedTouches[0].identifier;
-  event.target.style.color = "yellow";
+   const container = event.target.closest("button");
+  if (container) {
+    container.style.transform = "scale(1.5)";
+    // console.log(container);
+  }
   activeTouches[touchId] = setTimeout(
     () => console.log(`${button} button is being held`),
     500
   );
-  console.log(activeTouches);
 
+  //  event.target.style.pointerEvents = "none";
   // Handle the "forward" button press
   if (button === "forward") {
     isForwardPressed = true;
@@ -152,7 +156,11 @@ function handleTouchEnd(event, button) {
     clearTimeout(activeTouches[touchId]);
     delete activeTouches[touchId];
   }
-  event.target.style.color = "";
+  const container = event.target.closest("button");
+  if (container) {
+    container.style.transform = "scale(1)";
+    // console.log(container);
+  }
 
   // Stop the road animation if forward or reverse is released
   if (button === "forward") {
