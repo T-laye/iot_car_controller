@@ -168,7 +168,7 @@ button:active{
 
 .road {
   background-color: rgb(21, 21, 21);
-  flex: 1;
+  flex: 1.5;
   overflow: hidden;
   position: relative;
   display: flex;
