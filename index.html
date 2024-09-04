@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>IoT Car Controller</title>
   </head>
-  <body>
+  <body >
     <div id="landscape-message" class="landscape-message">
       Please rotate your device to landscape mode for the best experience.
     </div>
@@ -37,8 +37,8 @@
       </div>
 
       <div class="road">
-        <img src="./assets/light_car.png" alt="" />
-        <!-- <img src="./assets/car.png" alt="" /> -->
+        <img class="car-on hidden" src="./assets/light_car.png" alt="" />
+        <img class="car-off" src="./assets/car.png" alt="" />
         <div class="road-line"></div>
       </div>
 
@@ -54,8 +54,8 @@
           </div>
           <div class="lower">
             <button class="lights btn">
-              <img src="./assets/lights_on.png" alt="" />
-              <!-- <img src="./assets/light_off.png" alt="" /> -->
+              <img class="light-on hidden" src="./assets/lights_on.png" alt="" />
+              <img class="light-off" src="./assets/light_off.png" alt="" />
             </button>
             <button class="reverse btn">
               <img src="./assets/breaks.png" alt="" />
