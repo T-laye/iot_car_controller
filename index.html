@@ -106,10 +106,32 @@
         transition: all 0.5s ease;
         background-color: #cdcdcd;
       }
+      .speed-up {
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAYAAAB4Kn/lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgB7dTRDYIwEAbgo3EQVnAD3MARHMENihs4ghs4gozABnYD2aD+l/BALrn2Kpjw0D85SLny5dKHEhkSY2xRL9Qb5WmLzCiDy6zDFXQdnkF/w41oGV6I2vAE+smsdTyB9qiH+HZR9nozOvcl3CX+8UtYRTU4M9DVcRN7WnEyt6ZpesoEewJeJ1QQrc7hMYmGCc3gwwGNCVNz44wasR6oMIzDOPKkPKjZ0M44FUd/SoUrXOE9w0GsR9oquHjuqKflAuJ8ATZvFBkaAr8JAAAAAElFTkSuQmCC");
+      }
+      .speed-down {
+          background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADESURBVHgB7ZTbDcIwDEWtTsAIGaEjsAEjMAJs0IzABmUTYIKO0BHKBuZaCiIEWjttvqoeyYplO6cPKSEywMw7xJ5KAFHNH1paCiQ+ErI2X1FhNuEmXK8wHH5HM4n3VyHpED3yTpoZLpEdsQxh/1nesEa40Jf8ZpVi7oTlGpUOIrwjnlHRJEW/wXJJyo93U+68gb+RT3D/ri+R8S8+feKYtE1qjSpTpBqelH+TI52WZUptMqPU0xxGpJ6WEKR9EVkidpa5F+dxqBpk2ncEAAAAAElFTkSuQmCC");
+      }
+      .right-dir {
+          background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7ZZbDYQwEEVnVwES6mCRwDrBwa4DcAAOsIAEHIADcICE4RZKSAiEkJQpJD3JTSb9ObePjxJZgJlDJENiJCApIFNIzwu1WAGz2zUyBSCJeBuxAqkv4AvcvsDLDD8kRGy3inbWG+Sr5QWGmOQptbzFoEie7k3TEbigmu88RT5kn713NN45XQU2lRy9di/24seJlROxkTv9wwXs6vdqCuijz5H/GfEA6xw2hEFDBccAAAAASUVORK5CYII=')
+      }
+      .left-dir  {
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADASURBVHgB7ZXtDYIwFEVvmYAROoIj1E0cgQ3EDdyAjqATqBPICGygG9RbP2JiLEroK/zoSW4epITzoE2rMADnXMVSMlYp1SEVFDfuzYXRSMGH+EUFaQJij4EkPeIakmTxHMRbSMGXl8w5ILYQQnkx64FZBJ6xiM+JO6T18oY3K6RnVyD8xdIYL99jGtp/5vyI+HTM5n71Y7WvIU1uIDcw9wYMRlL0DXL/vbIsmfbLsEYKAn9AIxXPBmr3OPMNInADxQ36s6YgpRUAAAAASUVORK5CYII=');
+      }
+      .reverse {
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAApCAYAAABtEppnAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK/SURBVHgB5VrhVSIxEP7g8f/swL0KpAP2OqAD6eDoQKzg7EA6OKyAWIFYAbkK8Crg8rkTb4hJAPXpZvneG4dMhnUnmZnM7NLDLoZCXYV1tHL05AWVo7Wj7QnQ2tGwJ4bfOpo4unZk0F1Ujn6h2fVnPAidAuaOtn0ZWDSrcQq4cLQayODe0RhNYlsppTOhUvEElcgEtPHOD2o0gT9VCmOUlbRSdKVsqkM7z0Rwq5QeWnLj76WNsmkqstrHON3Byop43KEbsOrzSLgZKCHj/BLN7nMhZig/6dGOuRozvk2o9OIG6CZ8ON9w0FcTRnhXS9ZauOEf7eq+hqXCjci4CD9RLpinFvLZb6iNKS7xPwvSNdYoJ3unaBixbcfViUcx+Fx4hfLhC7Cd4iw03E/8QOMS1ygbRohGcwHuU4oVVObrECYITqxwxy2aBHeBbsHH+YurDyJKBumzvEK7EWtKiBGCJy8x+EJGn+cVysnw04hNlC+0oB9R8u5QK9kY5WT4q2BcCzdamDP8IiIrATYYv4pvopf48lr4dyWboIwYp0tbJfuNxmN7h1xgjiYuSn764sFNXIbCfkLZu0XpDYuvPh/DiUHiC0Z4tH+Vi03QDljs9twatXCDI8CCfpGYo/u0/QgjZnh9ND8j5eoE3X0UkVdoX5KrEnLePxPeUacS63Wu1nlmrg20yRjOuWVsIhXjhO7U5sEcXWuGdmR9m5BnO7Kc4UZdIIZUXdwWVMJNbDIX4xZld2q18DdVnax6Nnt0hqLz2XE93XNfjO03vwiNdWqxf/BVSS0H6qSO46yrE4dUcH/wNbCZuVq4SSnkkhvhDR8hXR3RK5gLvuHz8Bf5x2PRjuxYrFHejwaYm7Z4J+ZykZI6NW7WMqewz9UJJohLNK+QS3iDyuO3wgfda5tK1ENoiT0eetBTCYEvAduOg5qSf2fRN8v5Vt8yAAAAAElFTkSuQmCC')
+      }
+      .drive {
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAYAAAAc0MJxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUYSURBVHgB7Zzrcds4EMdXnvt+ugqCqyDuIHQFyVUQpYLYFUSuwL4K5FQQpwIqFVipgEwFcQf/YAUoZhzJ2F2AD2X8m1lTniEeXC7AxeIxo4EBMPeX0ygvvLj4m+LvLq2X+ygbL9/4OpvN1jQwMxoArxxWxGsvFQWlzCmftZfPfPWK29Cxwpbj5YOXGv1z52XhxdGxwJX1cuXlO8ZhNWmFIVjQFabDClNTmK/Qe4xnQU/ReDmnAmR15ghvbEWhk54yrZcz3+m3ZOSEjHglvfeXO5q+khjn5a6UdYnBtPoiLR/IgKrpITiL3NTe0HFz6+Wdb4r30gRiRUUl1fTgRZeCK9vSgxfehct0UUo4qV3YST2TKkukqMJK4orxG/1CwatuJYkQvPuuh19CcSplJfGV/IR8ai9votJL1GmBMl7/JyoBwjAkh9pLRT2BMBK4QR5XlAOCI2ml6VNBe+q6iGVasbkOCG/K6m1fo1ATU9Z5Hsu2wM/qSAtsb4cLW9DI+Dqcw0atLcjS5FhJpV0HM1wX2FqErAkiNLkGOmxm2zOwdR98f7rbQAhPaJmMJT0GNsu6SmXqoGfYgaYBhC+iFvdUhivouKYjAfqv4fWhjLTW1GAEF8AKguvQKJ7vl76qG4+qSMdFsTHSAMS6vlMkYSX93q0gzGRIWdGRAt34sH6c+BQ6HB0pvu4VdGy/6LumV5GcdU7seWziLPNakWQbpPwr/vNano42GHCw2xNrkhvHK/6zDdyxfdEzh+CPwL8nf4B19M12UQn3UZMdfkyIraIcPZPCsaJe0jMptoo6mmHIiLx8VpSQmcI1aEnvqA39EnZzhlIqkvbRCldeNb6DLQaUy0JZR/E0l3k1Swo/VLjxl0sajstYZi/0pijGV3xJwyjrMpbVG6yoVnjvP2QgPsBH6o+PGUr6W3hfq7GoF2SHA2B9LHHe0L7gmhzpx+b+hOQP4MhIjC7+R3LrldBynplRVunwbauob8KbOeZstqoYwzqjMspqKXNNJkJATmpRXzV9FHNGGcQHY8vKsYKtdRYIHmqCAa2m6TGvKJO4HeOC7FwU2tKhClbupnGkM6my6WYBPp8l9CypEFDMHncT1ZBTUSGgU9aSCgHdqKG2Vli3NCZdackw4oYKAp1hnHcTaqerKioEQtNPUWxwDf2M+OnjDGpF4tJW9SRUEOjWV9zt0nU98y8khycRKzoyEKILC0WS//dlovn6MQ3KfQF7tyjoF2kwbpf+p0XFoYBm8Oq8mPaVjATX1Snuvzno1MK2kOwtZZIqgDKBbU2qS2WqXXCVvcg1VQBlAP0XnUlHc6Hvq4DMxa6pzMkIbItdG/GzwLZO22xZqYzJAPpePt0pqIYNdSAtlSEp8UnewqakhrQgb4sH7xAVuw6pzBT55OyUt3cfsG+VYBoIp49SGQnzqDDGpqFOBaybcHaskHhTqQworaAaeSypBCi3sXFxIP8n2XM/N7ESCmJEGxvH2iq7pnAADZ/cs9mnjC7+Hp76dxSmwDnKWmq6XrxVdiqbr+cF7tEiVhIjnteLGfLkwi2VZV7oHg38DOU2XR8Ctnj3VLimIUFwHaZ4cM0huK5mF6DEITbcbzmaNmsKJ2e0NCYI1tVgemRZUS+gzPkDJRllp7wYjKuw71FBjo6FqLAFdNvbrNQIX+LeLGjI4yUrejiAJpfduZw8c3Q7xPGSgyjqMQhTXaw8R2FDwJwejkDq0sbr7rDSNv7eDL379AffKddb5q051wAAAABJRU5ErkJggg==')
+      }
+      .bg {
+        background-repeat: no-repeat;
+        background-position: center;
+      }
       .right {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
+          flex: 3;
+          display: flex;
+          flex-direction: column;
         justify-content: space-between;
         height: 100%;
       }
@@ -351,63 +373,17 @@
     <main id="content">
       <div class="left">
         <div class="left-controls">
-          <button class="speed-up">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAbCAYAAAB4Kn/lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgB7dTRDYIwEAbgo3EQVnAD3MARHMENihs4ghs4gozABnYD2aD+l/BALrn2Kpjw0D85SLny5dKHEhkSY2xRL9Qb5WmLzCiDy6zDFXQdnkF/w41oGV6I2vAE+smsdTyB9qiH+HZR9nozOvcl3CX+8UtYRTU4M9DVcRN7WnEyt6ZpesoEewJeJ1QQrc7hMYmGCc3gwwGNCVNz44wasR6oMIzDOPKkPKjZ0M44FUd/SoUrXOE9w0GsR9oquHjuqKflAuJ8ATZvFBkaAr8JAAAAAElFTkSuQmCC"
-              alt=""
-            />
-            <!-- <svg
-              width="22"
-              height="27"
-              viewBox="0 0 22 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.37938 11.8845C1.02246 11.5274 0.82196 11.0433 0.82196 10.5385C0.82196 10.0336 1.02246 9.54946 1.37938 9.19243L9.94669 0.625126C10.3037 0.268209 10.7879 0.0677052 11.2927 0.0677052C11.7975 0.0677052 12.2817 0.268209 12.6387 0.625126L21.206 9.19243C21.5528 9.5515 21.7447 10.0324 21.7404 10.5316C21.7361 11.0308 21.5358 11.5083 21.1828 11.8613C20.8299 12.2143 20.3523 12.4145 19.8532 12.4188C19.354 12.4232 18.8731 12.2313 18.514 11.8845L13.1966 6.73076L13.1966 24.8173C13.1966 25.3222 12.996 25.8065 12.6389 26.1635C12.2819 26.5206 11.7976 26.7211 11.2927 26.7211C10.7878 26.7211 10.3035 26.5206 9.94649 26.1635C9.58945 25.8065 9.38886 25.3222 9.38886 24.8173L9.38886 6.73076L4.07142 11.8845C3.7144 12.2414 3.23023 12.4419 2.7254 12.4419C2.22057 12.4419 1.7364 12.2414 1.37938 11.8845Z"
-                fill="white"
-              />
-            </svg> -->
+          <button class="speed-up bg">
           </button>
           <div class="dir">
-            <button class="left left-dir">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADASURBVHgB7ZXtDYIwFEVvmYAROoIj1E0cgQ3EDdyAjqATqBPICGygG9RbP2JiLEroK/zoSW4epITzoE2rMADnXMVSMlYp1SEVFDfuzYXRSMGH+EUFaQJij4EkPeIakmTxHMRbSMGXl8w5ILYQQnkx64FZBJ6xiM+JO6T18oY3K6RnVyD8xdIYL99jGtp/5vyI+HTM5n71Y7WvIU1uIDcw9wYMRlL0DXL/vbIsmfbLsEYKAn9AIxXPBmr3OPMNInADxQ36s6YgpRUAAAAASUVORK5CYII="
-                alt=""
-              />
-              <!-- <svg
-                width="31"
-                height="25"
-                viewBox="0 0 31 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.7685 23.9938C13.3549 24.4051 12.7948 24.6353 12.2114 24.6338C11.6281 24.6323 11.0692 24.3992 10.6577 23.9856L0.783532 14.0599C0.372171 13.6462 0.141937 13.0862 0.143457 12.5028C0.144977 11.9195 0.378127 11.3606 0.791638 10.9491L10.7174 1.07493C11.1334 0.675261 11.6897 0.454962 12.2665 0.461478C12.8433 0.467993 13.3945 0.700801 13.8013 1.10976C14.2082 1.51872 14.4381 2.07111 14.4416 2.64795C14.4451 3.2248 14.2219 3.77994 13.8201 4.19382L7.84869 10.3229L28.7486 10.3773C29.3321 10.3789 29.8911 10.6121 30.3026 11.0258C30.7141 11.4394 30.9444 11.9996 30.9429 12.5831C30.9414 13.1665 30.7081 13.7255 30.2945 14.137C29.8808 14.5485 29.3206 14.7788 28.7372 14.7773L7.83723 14.7229L13.7766 20.883C14.188 21.2966 14.4182 21.8567 14.4167 22.44C14.4152 23.0234 14.182 23.5823 13.7685 23.9938Z"
-                  fill="white"
-                />
-              </svg> -->
+            <button class="left left-dir bg">
+             
             </button>
-            <button class="right right-dir">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAZCAYAAADJ9/UkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7ZZbDYQwEEVnVwES6mCRwDrBwa4DcAAOsIAEHIADcICE4RZKSAiEkJQpJD3JTSb9ObePjxJZgJlDJENiJCApIFNIzwu1WAGz2zUyBSCJeBuxAqkv4AvcvsDLDD8kRGy3inbWG+Sr5QWGmOQptbzFoEie7k3TEbigmu88RT5kn713NN45XQU2lRy9di/24seJlROxkTv9wwXs6vdqCuijz5H/GfEA6xw2hEFDBccAAAAASUVORK5CYII="
-                alt=""
-              />
-              <!-- <svg
-                width="31"
-                height="25"
-                viewBox="0 0 31 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.2446 1.0446C17.6571 0.632161 18.2166 0.400467 18.8 0.400467C19.3833 0.400467 19.9428 0.632161 20.3554 1.0446L30.2554 10.9446C30.6678 11.3572 30.8995 11.9166 30.8995 12.5C30.8995 13.0834 30.6678 13.6428 30.2554 14.0554L20.3554 23.9554C19.9405 24.3561 19.3847 24.5779 18.8079 24.5729C18.2311 24.5679 17.6793 24.3365 17.2714 23.9286C16.8635 23.5207 16.6321 22.9689 16.6271 22.3921C16.6221 21.8152 16.8438 21.2595 17.2446 20.8446L23.2 14.7H2.29998C1.7165 14.7 1.15692 14.4682 0.744341 14.0556C0.331761 13.6431 0.0999756 13.0835 0.0999756 12.5C0.0999756 11.9165 0.331761 11.3569 0.744341 10.9444C1.15692 10.5318 1.7165 10.3 2.29998 10.3H23.2L17.2446 4.1554C16.8321 3.74284 16.6004 3.18336 16.6004 2.6C16.6004 2.01664 16.8321 1.45716 17.2446 1.0446Z"
-                  fill="white"
-                />
-              </svg> -->
+            <button class="right right-dir bg">
+             
             </button>
           </div>
-          <button class="speed-down">
+          <button class="speed-down bg">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADESURBVHgB7ZTbDcIwDEWtTsAIGaEjsAEjMAJs0IzABmUTYIKO0BHKBuZaCiIEWjttvqoeyYplO6cPKSEywMw7xJ5KAFHNH1paCiQ+ErI2X1FhNuEmXK8wHH5HM4n3VyHpED3yTpoZLpEdsQxh/1nesEa40Jf8ZpVi7oTlGpUOIrwjnlHRJEW/wXJJyo93U+68gb+RT3D/ri+R8S8+feKYtE1qjSpTpBqelH+TI52WZUptMqPU0xxGpJ6WEKR9EVkidpa5F+dxqBpk2ncEAAAAAElFTkSuQmCC"
               alt=""
@@ -661,11 +637,8 @@
         </div>
         <div class="right-controls">
           <div class="upper">
-            <button class="drive btn">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKCAYAAAAc0MJxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUYSURBVHgB7Zzrcds4EMdXnvt+ugqCqyDuIHQFyVUQpYLYFUSuwL4K5FQQpwIqFVipgEwFcQf/YAUoZhzJ2F2AD2X8m1lTniEeXC7AxeIxo4EBMPeX0ygvvLj4m+LvLq2X+ygbL9/4OpvN1jQwMxoArxxWxGsvFQWlzCmftZfPfPWK29Cxwpbj5YOXGv1z52XhxdGxwJX1cuXlO8ZhNWmFIVjQFabDClNTmK/Qe4xnQU/ReDmnAmR15ghvbEWhk54yrZcz3+m3ZOSEjHglvfeXO5q+khjn5a6UdYnBtPoiLR/IgKrpITiL3NTe0HFz6+Wdb4r30gRiRUUl1fTgRZeCK9vSgxfehct0UUo4qV3YST2TKkukqMJK4orxG/1CwatuJYkQvPuuh19CcSplJfGV/IR8ai9votJL1GmBMl7/JyoBwjAkh9pLRT2BMBK4QR5XlAOCI2ml6VNBe+q6iGVasbkOCG/K6m1fo1ATU9Z5Hsu2wM/qSAtsb4cLW9DI+Dqcw0atLcjS5FhJpV0HM1wX2FqErAkiNLkGOmxm2zOwdR98f7rbQAhPaJmMJT0GNsu6SmXqoGfYgaYBhC+iFvdUhivouKYjAfqv4fWhjLTW1GAEF8AKguvQKJ7vl76qG4+qSMdFsTHSAMS6vlMkYSX93q0gzGRIWdGRAt34sH6c+BQ6HB0pvu4VdGy/6LumV5GcdU7seWziLPNakWQbpPwr/vNano42GHCw2xNrkhvHK/6zDdyxfdEzh+CPwL8nf4B19M12UQn3UZMdfkyIraIcPZPCsaJe0jMptoo6mmHIiLx8VpSQmcI1aEnvqA39EnZzhlIqkvbRCldeNb6DLQaUy0JZR/E0l3k1Swo/VLjxl0sajstYZi/0pijGV3xJwyjrMpbVG6yoVnjvP2QgPsBH6o+PGUr6W3hfq7GoF2SHA2B9LHHe0L7gmhzpx+b+hOQP4MhIjC7+R3LrldBynplRVunwbauob8KbOeZstqoYwzqjMspqKXNNJkJATmpRXzV9FHNGGcQHY8vKsYKtdRYIHmqCAa2m6TGvKJO4HeOC7FwU2tKhClbupnGkM6my6WYBPp8l9CypEFDMHncT1ZBTUSGgU9aSCgHdqKG2Vli3NCZdackw4oYKAp1hnHcTaqerKioEQtNPUWxwDf2M+OnjDGpF4tJW9SRUEOjWV9zt0nU98y8khycRKzoyEKILC0WS//dlovn6MQ3KfQF7tyjoF2kwbpf+p0XFoYBm8Oq8mPaVjATX1Snuvzno1MK2kOwtZZIqgDKBbU2qS2WqXXCVvcg1VQBlAP0XnUlHc6Hvq4DMxa6pzMkIbItdG/GzwLZO22xZqYzJAPpePt0pqIYNdSAtlSEp8UnewqakhrQgb4sH7xAVuw6pzBT55OyUt3cfsG+VYBoIp49SGQnzqDDGpqFOBaybcHaskHhTqQworaAaeSypBCi3sXFxIP8n2XM/N7ESCmJEGxvH2iq7pnAADZ/cs9mnjC7+Hp76dxSmwDnKWmq6XrxVdiqbr+cF7tEiVhIjnteLGfLkwi2VZV7oHg38DOU2XR8Ctnj3VLimIUFwHaZ4cM0huK5mF6DEITbcbzmaNmsKJ2e0NCYI1tVgemRZUS+gzPkDJRllp7wYjKuw71FBjo6FqLAFdNvbrNQIX+LeLGjI4yUrejiAJpfduZw8c3Q7xPGSgyjqMQhTXaw8R2FDwJwejkDq0sbr7rDSNv7eDL379AffKddb5q051wAAAABJRU5ErkJggg=="
-                alt=""
-              />
+            <button class="drive btn bg">
+              
             </button>
           </div>
           <div class="lower">
@@ -681,11 +654,7 @@
                 alt=""
               />
             </button>
-            <button class="reverse btn">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAApCAYAAABtEppnAAAACXBIWXMAABCcAAAQnAEmzTo0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAK/SURBVHgB5VrhVSIxEP7g8f/swL0KpAP2OqAD6eDoQKzg7EA6OKyAWIFYAbkK8Crg8rkTb4hJAPXpZvneG4dMhnUnmZnM7NLDLoZCXYV1tHL05AWVo7Wj7QnQ2tGwJ4bfOpo4unZk0F1Ujn6h2fVnPAidAuaOtn0ZWDSrcQq4cLQayODe0RhNYlsppTOhUvEElcgEtPHOD2o0gT9VCmOUlbRSdKVsqkM7z0Rwq5QeWnLj76WNsmkqstrHON3Byop43KEbsOrzSLgZKCHj/BLN7nMhZig/6dGOuRozvk2o9OIG6CZ8ON9w0FcTRnhXS9ZauOEf7eq+hqXCjci4CD9RLpinFvLZb6iNKS7xPwvSNdYoJ3unaBixbcfViUcx+Fx4hfLhC7Cd4iw03E/8QOMS1ygbRohGcwHuU4oVVObrECYITqxwxy2aBHeBbsHH+YurDyJKBumzvEK7EWtKiBGCJy8x+EJGn+cVysnw04hNlC+0oB9R8u5QK9kY5WT4q2BcCzdamDP8IiIrATYYv4pvopf48lr4dyWboIwYp0tbJfuNxmN7h1xgjiYuSn764sFNXIbCfkLZu0XpDYuvPh/DiUHiC0Z4tH+Vi03QDljs9twatXCDI8CCfpGYo/u0/QgjZnh9ND8j5eoE3X0UkVdoX5KrEnLePxPeUacS63Wu1nlmrg20yRjOuWVsIhXjhO7U5sEcXWuGdmR9m5BnO7Kc4UZdIIZUXdwWVMJNbDIX4xZld2q18DdVnax6Nnt0hqLz2XE93XNfjO03vwiNdWqxf/BVSS0H6qSO46yrE4dUcH/wNbCZuVq4SSnkkhvhDR8hXR3RK5gLvuHz8Bf5x2PRjuxYrFHejwaYm7Z4J+ZykZI6NW7WMqewz9UJJohLNK+QS3iDyuO3wgfda5tK1ENoiT0eetBTCYEvAduOg5qSf2fRN8v5Vt8yAAAAAElFTkSuQmCC"
-                alt=""
-              />
+            <button class="reverse btn bg">
             </button>
           </div>
         </div>
@@ -693,229 +662,229 @@
     </main>
 
     <script>
-      var gateway = "ws://192.168.1.184/ws";
-      var websocket;
+        var gateway = "ws://192.168.1.184/ws";
+        var websocket;
 
-      window.addEventListener("load", initWebSocket);
+        window.addEventListener("load", initWebSocket);
 
-      function initWebSocket() {
-        console.log("Trying to open a WebSocket connection...");
-        websocket = new WebSocket(gateway);
-        websocket.onopen = () => console.log("Connection opened");
-        websocket.onclose = () => {
-          console.log("Connection closed");
-          setTimeout(initWebSocket, 2000);
+        function initWebSocket() {
+          console.log("Trying to open a WebSocket connection...");
+          websocket = new WebSocket(gateway);
+          websocket.onopen = () => console.log("Connection opened");
+          websocket.onclose = () => {
+            console.log("Connection closed");
+            setTimeout(initWebSocket, 2000);
+          };
+        }
+
+        function changeState(state) {
+          websocket.send(state);
+        }
+
+        let activeTouches = {};
+        let speed = 0;
+        let isForwardPressed = false;
+        let isBackwardPressed = false;
+        const level1 = document.querySelector(".speed-1");
+        const level2 = document.querySelector(".speed-2");
+        const level3 = document.querySelector(".speed-3");
+        const roadLine = document.querySelector(".road-line");
+        const lightOn = document.querySelector(".light-on");
+        const lightOff = document.querySelector(".light-off");
+        const carOff = document.querySelector(".car-off");
+        const carOn = document.querySelector(".car-on");
+        const body = document.querySelector("body");
+        const road = document.querySelector(".road");
+
+        const buttons = {
+          left: document.querySelector(".left-dir"),
+          right: document.querySelector(".right-dir"),
+          reverse: document.querySelector(".reverse"),
+          forward: document.querySelector(".drive"),
+          lights: document.querySelector(".lights"),
+          speedUp: document.querySelector(".speed-up"),
+          speedDown: document.querySelector(".speed-down"),
         };
-      }
 
-      function changeState(state) {
-        websocket.send(state);
-      }
-
-      let activeTouches = {};
-      let speed = 0;
-      let isForwardPressed = false;
-      let isBackwardPressed = false;
-      const level1 = document.querySelector(".speed-1");
-      const level2 = document.querySelector(".speed-2");
-      const level3 = document.querySelector(".speed-3");
-      const roadLine = document.querySelector(".road-line");
-      const lightOn = document.querySelector(".light-on");
-      const lightOff = document.querySelector(".light-off");
-      const carOff = document.querySelector(".car-off");
-      const carOn = document.querySelector(".car-on");
-      const body = document.querySelector("body");
-      const road = document.querySelector(".road");
-
-      const buttons = {
-        left: document.querySelector(".left-dir"),
-        right: document.querySelector(".right-dir"),
-        reverse: document.querySelector(".reverse"),
-        forward: document.querySelector(".drive"),
-        lights: document.querySelector(".lights"),
-        speedUp: document.querySelector(".speed-up"),
-        speedDown: document.querySelector(".speed-down"),
-      };
-
-      const states = {
-        left: "left",
-        right: "right",
-        reverse: "reverse",
-        forward: "forward",
-        straight: "straight",
-        off: "stop",
-        lights: "on",
-      };
-
-      function updateRoadSpeed(speed) {
-        const speedMap = {
-          1: "3s",
-          2: "1.5s",
-          3: "0.5s",
+        const states = {
+          left: "left",
+          right: "right",
+          reverse: "reverse",
+          forward: "forward",
+          straight: "straight",
+          off: "stop",
+          lights: "on",
         };
-        if (isForwardPressed && speed > 0) {
-          roadLine.style.animation = `highway ${speedMap[speed]} linear infinite`;
-        }
-      }
 
-      function updateReverseRoadSpeed(speed) {
-        const speedMap = {
-          1: "3s",
-          2: "1.5s",
-          3: "0.5s",
-        };
-        if (isBackwardPressed) {
-          roadLine.style.animation = `reverse-highway ${speedMap[speed]} linear infinite`;
-        }
-      }
-
-      function speedBar() {
-        if (speed === 1) {
-          level1.style.backgroundColor = "#C64902";
-          level2.style.backgroundColor = "#Cdcdcd";
-          level3.style.backgroundColor = "#CDCDCD";
-        } else if (speed === 2) {
-          level1.style.backgroundColor = "#C64902";
-          level2.style.backgroundColor = "#C64902";
-          level3.style.backgroundColor = "#CDCDCD";
-        } else if (speed === 3) {
-          level1.style.backgroundColor = "#C64902";
-          level2.style.backgroundColor = "#C64902";
-          level3.style.backgroundColor = "#C64902";
-        } else {
-          level1.style.backgroundColor = "#Cdcdcd";
-          level2.style.backgroundColor = "#CDCDCD";
-          level3.style.backgroundColor = "#CDCDCD";
-        }
-      }
-
-      function handleTouchStart(event, button) {
-        const touchId = event.changedTouches[0].identifier;
-        const container = event.target.closest("button");
-        if (container) {
-          container.style.transform = "scale(1.5)";
-        }
-        activeTouches[touchId] = setTimeout(
-          () => console.log(`${button} button is being held`),
-          500
-        );
-
-        if (button === "left" && (isForwardPressed || isBackwardPressed)) {
-          carOff.classList.add("move-left");
-          carOn.classList.add("move-left");
-          changeState(states[button]);
-        } else if (
-          button === "right" &&
-          (isForwardPressed || isBackwardPressed)
-        ) {
-          carOn.classList.add("move-right");
-          carOff.classList.add("move-right");
-          changeState(states[button]);
+        function updateRoadSpeed(speed) {
+          const speedMap = {
+            1: "3s",
+            2: "1.5s",
+            3: "0.5s",
+          };
+          if (isForwardPressed && speed > 0) {
+            roadLine.style.animation = `highway ${speedMap[speed]} linear infinite`;
+          }
         }
 
-        if (button === "forward") {
-          isForwardPressed = true;
-          speed = 1;
-          speedBar();
-          updateRoadSpeed(speed);
-          changeState(`speed${speed}`);
-          changeState(states[button]);
+        function updateReverseRoadSpeed(speed) {
+          const speedMap = {
+            1: "3s",
+            2: "1.5s",
+            3: "0.5s",
+          };
+          if (isBackwardPressed) {
+            roadLine.style.animation = `reverse-highway ${speedMap[speed]} linear infinite`;
+          }
         }
 
-        if (button === "reverse") {
-          isBackwardPressed = true;
-          speed++;
-          speedBar();
-          updateReverseRoadSpeed(speed);
-          changeState(`speed${speed}`);
-          changeState(states[button]);
+        function speedBar() {
+          if (speed === 1) {
+            level1.style.backgroundColor = "#C64902";
+            level2.style.backgroundColor = "#Cdcdcd";
+            level3.style.backgroundColor = "#CDCDCD";
+          } else if (speed === 2) {
+            level1.style.backgroundColor = "#C64902";
+            level2.style.backgroundColor = "#C64902";
+            level3.style.backgroundColor = "#CDCDCD";
+          } else if (speed === 3) {
+            level1.style.backgroundColor = "#C64902";
+            level2.style.backgroundColor = "#C64902";
+            level3.style.backgroundColor = "#C64902";
+          } else {
+            level1.style.backgroundColor = "#Cdcdcd";
+            level2.style.backgroundColor = "#CDCDCD";
+            level3.style.backgroundColor = "#CDCDCD";
+          }
         }
 
-        if (button === "speedUp" && speed < 3) {
-          speed++;
-          speedBar();
-          changeState(`speed${speed}`);
-          if (isForwardPressed) {
+        function handleTouchStart(event, button) {
+          const touchId = event.changedTouches[0].identifier;
+          const container = event.target.closest("button");
+          if (container) {
+            container.style.transform = "scale(1.5)";
+          }
+          activeTouches[touchId] = setTimeout(
+            () => console.log(`${button} button is being held`),
+            500
+          );
+
+          if (button === "left" && (isForwardPressed || isBackwardPressed)) {
+            carOff.classList.add("move-left");
+            carOn.classList.add("move-left");
+            changeState(states[button]);
+          } else if (
+            button === "right" &&
+            (isForwardPressed || isBackwardPressed)
+          ) {
+            carOn.classList.add("move-right");
+            carOff.classList.add("move-right");
+            changeState(states[button]);
+          }
+
+          if (button === "forward") {
+            isForwardPressed = true;
+            speed = 1;
+            speedBar();
             updateRoadSpeed(speed);
             changeState(`speed${speed}`);
+            changeState(states[button]);
           }
-          if (isBackwardPressed) {
+
+          if (button === "reverse") {
+            isBackwardPressed = true;
+            speed++;
+            speedBar();
             updateReverseRoadSpeed(speed);
             changeState(`speed${speed}`);
+            changeState(states[button]);
           }
-        } else if (button === "speedDown" && speed > 1) {
-          speed--;
-          speedBar();
-          console.log(`Slowing down: speed${speed}`);
-          changeState(`speed${speed}`);
-          if (isForwardPressed) {
-            updateRoadSpeed(speed);
+
+          if (button === "speedUp" && speed < 3) {
+            speed++;
+            speedBar();
             changeState(`speed${speed}`);
-          }
-          if (isBackwardPressed) {
-            updateReverseRoadSpeed(speed);
+            if (isForwardPressed) {
+              updateRoadSpeed(speed);
+              changeState(`speed${speed}`);
+            }
+            if (isBackwardPressed) {
+              updateReverseRoadSpeed(speed);
+              changeState(`speed${speed}`);
+            }
+          } else if (button === "speedDown" && speed > 1) {
+            speed--;
+            speedBar();
+            console.log(`Slowing down: speed${speed}`);
             changeState(`speed${speed}`);
+            if (isForwardPressed) {
+              updateRoadSpeed(speed);
+              changeState(`speed${speed}`);
+            }
+            if (isBackwardPressed) {
+              updateReverseRoadSpeed(speed);
+              changeState(`speed${speed}`);
+            }
+          }
+
+          if (button !== "speedUp" && button !== "speedDown") {
+            console.log(`Action: ${states[button]}`);
+          }
+
+          if (button === "lights") {
+            carOff.classList.toggle("hidden");
+            carOn.classList.toggle("hidden");
+            lightOn.classList.toggle("hidden");
+            lightOff.classList.toggle("hidden");
+            body.classList.toggle("theme");
+            road.classList.toggle("road-color");
+            changeState(states[button]);
           }
         }
 
-        if (button !== "speedUp" && button !== "speedDown") {
-          console.log(`Action: ${states[button]}`);
+        function handleTouchEnd(event, button) {
+          const touchId = event.changedTouches[0].identifier;
+          if (activeTouches[touchId]) {
+            clearTimeout(activeTouches[touchId]);
+            delete activeTouches[touchId];
+          }
+          const container = event.target.closest("button");
+          if (container) {
+            container.style.transform = "scale(1)";
+          }
+          if (button === "left") {
+            carOff.classList.remove("move-left");
+            carOn.classList.remove("move-left");
+            changeState(states.straight);
+          }
+          if (button === "right") {
+            carOff.classList.remove("move-right");
+            carOn.classList.remove("move-right");
+            changeState(states.straight);
+          }
+          if (button === "forward") {
+            speed = 0;
+            speedBar();
+            isForwardPressed = false;
+            roadLine.style.animation = "";
+            changeState(states.off);
+          } else if (button === "reverse") {
+            speed = 0;
+            speedBar();
+            isBackwardPressed = false;
+            roadLine.style.animation = "";
+            changeState(states.off);
+          }
         }
 
-        if (button === "lights") {
-          carOff.classList.toggle("hidden");
-          carOn.classList.toggle("hidden");
-          lightOn.classList.toggle("hidden");
-          lightOff.classList.toggle("hidden");
-          body.classList.toggle("theme");
-          road.classList.toggle("road-color");
-          changeState(states[button]);
-        }
-      }
-
-      function handleTouchEnd(event, button) {
-        const touchId = event.changedTouches[0].identifier;
-        if (activeTouches[touchId]) {
-          clearTimeout(activeTouches[touchId]);
-          delete activeTouches[touchId];
-        }
-        const container = event.target.closest("button");
-        if (container) {
-          container.style.transform = "scale(1)";
-        }
-        if (button === "left") {
-          carOff.classList.remove("move-left");
-          carOn.classList.remove("move-left");
-          changeState(states.straight);
-        }
-        if (button === "right") {
-          carOff.classList.remove("move-right");
-          carOn.classList.remove("move-right");
-          changeState(states.straight);
-        }
-        if (button === "forward") {
-          speed = 0;
-          speedBar();
-          isForwardPressed = false;
-          roadLine.style.animation = "";
-          changeState(states.off);
-        } else if (button === "reverse") {
-          speed = 0;
-          speedBar();
-          isBackwardPressed = false;
-          roadLine.style.animation = "";
-          changeState(states.off);
-        }
-      }
-
-      Object.keys(buttons).forEach((button) => {
-        buttons[button].addEventListener("touchstart", (event) =>
-          handleTouchStart(event, button)
-        );
-        buttons[button].addEventListener("touchend", (event) =>
-          handleTouchEnd(event, button)
-        );
-      });
+        Object.keys(buttons).forEach((button) => {
+          buttons[button].addEventListener("touchstart", (event) =>
+            handleTouchStart(event, button)
+          );
+          buttons[button].addEventListener("touchend", (event) =>
+            handleTouchEnd(event, button)
+          );
+        });
     </script>
   </body>
 </html>
