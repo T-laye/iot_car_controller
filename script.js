@@ -106,7 +106,7 @@ function handleTouchStart(event, button) {
     500
   );
 
-  console.log(button);
+//   console.log(button);
   if (button === "left" && (isForwardPressed || isBackwardPressed)) {
     carOff.classList.add("move-left");
     carOn.classList.add("move-left");
