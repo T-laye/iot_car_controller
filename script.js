@@ -59,7 +59,7 @@ function updateRoadSpeed(speed) {
     2: "1.5s",
     3: "0.5s",
   };
-  if (isForwardPressed) {
+  if (isForwardPressed && speed > 0) {
     roadLine.style.animation = `highway ${speedMap[speed]} linear infinite`;
   }
 }
@@ -107,10 +107,10 @@ function handleTouchStart(event, button) {
   );
 
   console.log(button);
-  if (button === "left") {
+  if (button === "left" && (isForwardPressed || isBackwardPressed)) {
     carOff.classList.add("move-left");
     carOn.classList.add("move-left");
-  } else if (button === "right") {
+  } else if (button === "right" && (isForwardPressed || isBackwardPressed)) {
     carOn.classList.add("move-right");
     carOff.classList.add("move-right");
   }
