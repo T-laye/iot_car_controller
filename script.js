@@ -33,8 +33,8 @@ const body = document.querySelector("body");
 const road = document.querySelector(".road");
 
 const buttons = {
-  left: document.querySelector(".left"),
-  right: document.querySelector(".right"),
+  left: document.querySelector(".left-dir"),
+  right: document.querySelector(".right-dir"),
   reverse: document.querySelector(".reverse"),
   forward: document.querySelector(".drive"),
   lights: document.querySelector(".lights"),
