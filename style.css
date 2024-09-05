@@ -101,12 +101,13 @@ button {
   border-radius: 50%;
   height: 30px;
   width: 30px;
+  transition: all 0.5s ease;
   background-color: #cdcdcd;
 }
 
-.speed-1 {
+/* .speed-1 {
   background-color: #c64902;
-}
+} */
 
 /* Right controls */
 
@@ -188,8 +189,20 @@ button {
 
 .road img {
   z-index: 10;
-   pointer-events: none; /* Disable all interactions with the image */
+  transition: transform 1s ease; /* Use transition for smooth animations */
 }
+
+.move-left {
+  transform: translateX(-30%);
+  transition: transform 1s ease; /* Apply the transition to transform */
+}
+
+.move-right {
+  transform: translateX(30%);
+  transition: transform 1s ease; /* Different easing for right movement */
+}
+
+
 .road-line {
   background-image: url("assets/road_line.png");
   background-position: center;

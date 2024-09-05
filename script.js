@@ -18,9 +18,10 @@
 // }
 
 let activeTouches = {};
-let speed = 1;
+let speed = 0;
 let isForwardPressed = false; // Flag to track if forward is pressed
 let isBackwardPressed = false; // Flag to track if forward is pressed
+const level1 = document.querySelector(".speed-1");
 const level2 = document.querySelector(".speed-2");
 const level3 = document.querySelector(".speed-3");
 const roadLine = document.querySelector(".road-line");
@@ -75,13 +76,20 @@ function updateReverseRoadSpeed(speed) {
 }
 
 function speedBar() {
-  if (speed === 2) {
+  if (speed === 1) {
+    level1.style.backgroundColor = "#C64902";
+    level2.style.backgroundColor = "#Cdcdcd";
+    level3.style.backgroundColor = "#CDCDCD";
+  } else if (speed === 2) {
+    level1.style.backgroundColor = "#C64902";
     level2.style.backgroundColor = "#C64902";
     level3.style.backgroundColor = "#CDCDCD";
   } else if (speed === 3) {
-    level3.style.backgroundColor = "#C64902";
+    level1.style.backgroundColor = "#C64902";
     level2.style.backgroundColor = "#C64902";
+    level3.style.backgroundColor = "#C64902";
   } else {
+    level1.style.backgroundColor = "#Cdcdcd";
     level2.style.backgroundColor = "#CDCDCD";
     level3.style.backgroundColor = "#CDCDCD";
   }
@@ -92,23 +100,35 @@ function handleTouchStart(event, button) {
   const container = event.target.closest("button");
   if (container) {
     container.style.transform = "scale(1.5)";
-    // console.log(container);
   }
   activeTouches[touchId] = setTimeout(
     () => console.log(`${button} button is being held`),
     500
   );
 
+  console.log(button);
+  if (button === "left") {
+    carOff.classList.add("move-left");
+    carOn.classList.add("move-left");
+  } else if (button === "right") {
+    carOn.classList.add("move-right");
+    carOff.classList.add("move-right");
+  }
+
   //  event.target.style.pointerEvents = "none";
   // Handle the "forward" button press
   if (button === "forward") {
     isForwardPressed = true;
+    speed++;
+    speedBar();
     updateRoadSpeed(speed); // Start road animation if forward is pressed
   }
 
   // Handle the "reverse" button press
   if (button === "reverse") {
     isBackwardPressed = true;
+    speed++;
+    speedBar();
     updateReverseRoadSpeed(speed); // Start reverse animation
   }
 
@@ -161,12 +181,23 @@ function handleTouchEnd(event, button) {
     container.style.transform = "scale(1)";
     // console.log(container);
   }
-
+  if (button === "left") {
+    carOff.classList.remove("move-left");
+    carOn.classList.remove("move-left");
+  }
+  if (button === "right") {
+    carOff.classList.remove("move-right");
+    carOn.classList.remove("move-right");
+  }
   // Stop the road animation if forward or reverse is released
   if (button === "forward") {
+    speed = 0;
+    speedBar();
     isForwardPressed = false; // Reset the forward flag
     roadLine.style.animation = ""; // Stop the road animation
   } else if (button === "reverse") {
+    speed = 0;
+    speedBar();
     isBackwardPressed = false; // Reset the forward flag
     roadLine.style.animation = ""; // Stop the reverse animation
   }
