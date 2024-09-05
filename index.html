@@ -878,9 +878,9 @@
           button === "right" &&
           (isForwardPressed || isBackwardPressed)
         ) {
-          changeState(states[button]);
-          carOn.classList.add("move-right");
-          carOff.classList.add("move-right");
+            carOn.classList.add("move-right");
+            carOff.classList.add("move-right");
+            changeState(states[button]);
         }
 
         if (button === "forward") {
@@ -933,13 +933,13 @@
         }
 
         if (button === "lights") {
-          changeState(states[button]);
-          carOff.classList.toggle("hidden");
-          carOn.classList.toggle("hidden");
-          lightOn.classList.toggle("hidden");
-          lightOff.classList.toggle("hidden");
-          body.classList.toggle("theme");
-          road.classList.toggle("road-color");
+            carOff.classList.toggle("hidden");
+            carOn.classList.toggle("hidden");
+            lightOn.classList.toggle("hidden");
+            lightOff.classList.toggle("hidden");
+            body.classList.toggle("theme");
+            road.classList.toggle("road-color");
+            changeState(states[button]);
         }
       }
 
